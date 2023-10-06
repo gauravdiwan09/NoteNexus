@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<title>NOTES SUPPORT</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#A020F0">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<style>
+
+
+.blue {
+    background: #347fd0;
+}
+
+.news {
+    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+       width: 890px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 1px;
+    -webkit-user-select: none;
+}
+
+.news span {
+    float: left;
+    color: #fff;
+    padding: 9px;
+    position: relative;
+    top: 1%;
+    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4);
+    font: 16px 'Raleway', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.text1{
+
+	box-shadow:none !important;
+    width: 750px;
+}
+	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+html,body{
+  margin:0;
+  height:120%;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+a{
+  text-decoration:none
+}
+.header{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:400px;
+  max-height:550px;
+  min-width:300px;
+  color:#eee;
+}
+.header:after{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index:-1;
+ background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+}
+.header:before{
+  content:"";
+  width:100%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0); backface-visibility: hidden;
+	scale (1.0, 1.0);
+    transform: translateZ(0);
+  background:#1B2030 url(images/prayas.jpg) 50% 0 no-repeat;
+  background-size:100%;
+  background-attachment:fixed;
+  animation: grow 400s  linear 10ms infinite;
+  transition:all 0.7s ease-in-out;
+  z-index:-2
+}
+.header a{
+  color:#eee
+}
+.menu{
+  display:block;
+  width:40px;
+  height:30px;
+  border:2px solid #fff;
+  border-radius:3px;
+  position:absolute;
+  right:20px;
+  top:20px;
+  text-decoration:none
+}
+.menu:after{
+  content:"";
+  display:block;
+  width:20px;
+  height:3px;
+  background:#fff;
+  position:absolute;
+  margin:0 auto;
+  top:5px;
+  left:0;
+  right:0;
+  box-shadow:0 8px, 0 16px
+}
+.logo{
+  margin-left: 0px;
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  align-content:center;
+  margin:20px;
+  padding:0px 10px;
+  font-weight:900;
+  font-size:1.1em;
+  line-height:1;
+  box-sizing:border-box;
+  height:40px
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #120911; /* Change this to your preferred background color */
+    color: #fff; /* Change this to your preferred text color */
+    padding: 10px 0;
+    z-index: 100; /* To ensure the navbar appears above other content */
+    border-bottom: 0.5px solid #f7f6f6;
+}
+
+.navbar{
+  margin-left: 0px;
+  width: 100%;
+  height: 90px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sides{
+  margin-left: 0px;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sides2{
+  margin-right: 0px;
+}
+.info{
+  width:100%;
+  padding:15% 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
+}
+.author{
+  display:inline-block;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:url(../../i.imgur.com/6DLCsZcb.jpg) center no-repeat;
+  background-size:cover;
+  box-shadow:0 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:3px;
+}
+.info h4, .meta{
+  font-size:0.7em
+}
+.meta{
+  font-style:italic;
+}
+@keyframes grow{
+  0% { transform: scale(1) translateY(0px)}
+  50% { transform: scale(1.2) translateY(-400px)}
+}
+.content{  
+  padding:5% 10%;
+  text-align:justify
+}
+.btn{
+  color:#333;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-weight:600
+}
+.twtr{
+  margin-top:100px
+}.btn.twtr:after{content:"\1F426";padding-left:5px}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    font-size: 38px;
+    margin: 20px 0;
+    color: #f10f0f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.gaurav{
+    background-image: url(images/team-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: #17a2b8;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    color: #0d0d0d;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    border: 2px solid transparent;
+}
+
+.team-member:hover {
+    color: #eee;
+    background-color: #e74c3c;
+    transform: translateY(-5px);
+    border-color: #151313;
+}
+
+.team-member h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.page-title{
+  background-color: #f5f5f5;
+  color: #fd0404;
+}
+.counter-container {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 200px;
+    border: 3px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        background-color: #007BFF;
+    }
+    to {
+        transform: scale(1.05);
+        background-color: #f3f8f6;
+    }
+}
+
+#visitor-count {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.animated-text {
+    animation: color-change 2s infinite alternate;
+}
+
+@keyframes color-change {
+    from {
+        color: #fff;
+    }
+    to {
+        color: #0a0a0a;
+    }
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Style for the copyright symbol */
+        .copyright-symbol {
+            font-size: 18px;
+            margin-right: 5px;
+        }       
+</style>
+
+</head>
+<body>
+	<div class="header">
+		<nav class="navbar">
+      <div class="sides">
+      <a href="" class="logo">HOME</a>
+		  <a href="https://scholarshipportal.mp.nic.in/Index.aspx" target="_blank" class="logo">State Scholarship Portal</a>
+		  <a href="NOTES/Academic calendar 2023-24.pdf" target="_blank" class="logo">Academic Calender</a>
+      <div class="sides2"> <a href="#" class="menu"> </a></div>
+    </div>
+    </nav>
+		
+		<div class="info">
+		<h1>Important Links &#128071;</h1>
+		
+		<h6>
+			<a href="https://lnct.ac.in/osm/" target="_blank" class="logo">LNCT Faculties Notes (For 1st year notes go on 'ENGINEERING SCIENCES HUMANITIES')</a>
+		  </h6>
+		  <h6>
+			<a href="https://www.rgpvnotes.in/btech/grading-system-old/notes/" target="_blank" class="logo">RGPV Notes</a>
+		  </h6>
+		</div>
+	  </div>
+	  <section class="content">
+	  <div class="news blue">
+		<span>Latest News</span><span class="text1" ><marquee>Hello everyone! More notes will be updated soon...stay tuned! </marquee></span>
+		</div>
+	  </section>
+
+
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">YEAR</th>
+								<th class="column2">SEMESTER</th>
+								<th class="column3">SUBJECT</th>
+								<th class="column4">DESCRIPTION</th>
+								<th class="column5">NOTES LINK</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Engineering Physics BT-201</td>
+									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/Engineering Physics BT-201.pdf" role="button">Link</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Engineering Maths BT-202</td>
+									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/MATHS-2 BT-202.pdf" role="button">Link</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Mechanical Engineering BT-203</td>
+									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/BME BT-203.pdf" role="button">Link</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Civil Engineering & Mechanics BT-204</td>
+									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/civil and mechanics BT-204.pdf" role="button">Link</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Computer Engineering BT-205</td>
+									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/BCE bt-205.pdf" role="button">Link</a></td>
+								
+								</tr>
+								
+							</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="gaurav">
+	<h1 class="page-title"><u>Team Members Info</u></h1>
+    <div class="team-members">
+        <div class="team-member">
+            <h2>Lalit Lowanshi</h2>
+            <a href="https://www.linkedin.com/in/lalit-lowanshi-9b3104273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedin</a>
+            <p>Email: lalitlowanshi0000@gmail.com</p>
+        </div>
+        
+        <div class="team-member">
+            <h2>Gaurav Diwan</h2>
+            <a href="https://www.linkedin.com/in/gauravdiwann/" target="_blank">Linkedin</a>
+            <p>Email: gauravdiwan10th@gmail.com</p>
+        </div>
+		<div class="team-member">
+            <h2>Harshit Dayma</h2>
+            <a href="" target="_blank" >Linkedin</a>
+            <p>Email: harshitdayma214@gmail.com</p>
+        </div>
+
+        <!-- Add more team members as needed -->
+    </div>
+
+    <div class="counter">
+    <div class="counter-container">
+      <div id="visitor-count" class="animated-text">Visitor count: <span id="count">0</span></div>
+    </div>
+    </div>
+  </div>
+    <footer>
+      <p>
+          <span class="copyright-symbol">&#169;</span> 2023 Notes Support. All rights reserved.
+      </p>
+      <h6>Designed & Hosted by : Gaurav Diwan & Team</h6>
+  </footer>
+
+  <script src="js/counter.js"></script>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.html"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
