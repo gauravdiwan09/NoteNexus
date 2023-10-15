@@ -3,7 +3,7 @@
 
 
 <head>
-	<title>NOTES SUPPORT</title>
+	<title>Note Nexus</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#A020F0">
@@ -22,6 +22,10 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/Team.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/gif.css">
 <!--===============================================================================================-->
 <style>
 
@@ -242,53 +246,6 @@ body {
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-.gaurav{
-    background-image: url(images/team-image.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.team-members {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.team-member {
-    background-color: #17a2b8;
-    border-radius: 8px;
-    padding: 20px;
-    width: 220px;
-    color: #0d0d0d;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-    margin: 10px;
-    border: 2px solid transparent;
-}
-
-.team-member:hover {
-    color: #eee;
-    background-color: #e74c3c;
-    transform: translateY(-5px);
-    border-color: #151313;
-}
-
-.team-member h2 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.team-member p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-.page-title{
-  background-color: #f5f5f5;
-  color: #fd0404;
-}
 .counter{
   display: flex;
   align-items: center;
@@ -356,7 +313,7 @@ footer {
       <div class="sides">
       <a href="" class="logo">HOME</a>
 		  <a href="https://scholarshipportal.mp.nic.in/Index.aspx" target="_blank" class="logo">State Scholarship Portal</a>
-		  <a href="NOTES/Academic calendar 2023-24.pdf" target="_blank" class="logo">Academic Calender</a>
+		  <a href="https://drive.google.com/file/d/1c_BiLegpzYBujdF1CaC3HiTsbR1FYGKt/view?usp=drivesdk" target="_blank" class="logo">Academic Calender</a>
       <div class="sides2"> <a href="#" class="menu"> </a></div>
     </div>
     </nav>
@@ -390,8 +347,7 @@ footer {
 								<th class="column1">YEAR</th>
 								<th class="column2">SEMESTER</th>
 								<th class="column3">SUBJECT</th>
-								<th class="column4">DESCRIPTION</th>
-								<th class="column5">NOTES LINK</th>
+								<th class="column5">NOTES</th>
 							
 							</tr>
 						</thead>
@@ -400,40 +356,35 @@ footer {
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Engineering Physics BT-201</td>
-									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/Engineering Physics BT-201.pdf" role="button">Link</a></td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/physics.html" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Engineering Maths BT-202</td>
-									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/MATHS-2 BT-202.pdf" role="button">Link</a></td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/M2.html" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Mechanical Engineering BT-203</td>
-									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/BME BT-203.pdf" role="button">Link</a></td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/BME.html" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Civil Engineering & Mechanics BT-204</td>
-									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/civil and mechanics BT-204.pdf" role="button">Link</a></td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/CE&EM.html" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Computer Engineering BT-205</td>
-									<td class="column4">Complete Handwritten Notes (by Lalit Lowanshi)</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="NOTES/BCE bt-205.pdf" role="button">Link</a></td>
+									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/BCE.html" role="button">Show</a></td>
 								
 								</tr>
 								
@@ -442,43 +393,57 @@ footer {
 				</div>
 			</div>
 		</div>
-	</div>
-<div class="gaurav">
-	<h1 class="page-title"><u>Team Members Info</u></h1>
-    <div class="team-members">
-        <div class="team-member">
-            <h2>Lalit Lowanshi</h2>
-            <a href="https://www.linkedin.com/in/lalit-lowanshi-9b3104273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedin</a>
-            <p>Email: lalitlowanshi0000@gmail.com</p>
-        </div>
-        
-        <div class="team-member">
-            <h2>Gaurav Diwan</h2>
-            <a href="https://www.linkedin.com/in/gauravdiwann/" target="_blank">Linkedin</a>
-            <p>Email: gauravdiwan10th@gmail.com</p>
-        </div>
-		<div class="team-member">
-            <h2>Harshit Dayma</h2>
-            <a href="" target="_blank" >Linkedin</a>
-            <p>Email: harshitdayma214@gmail.com</p>
-        </div>
+<!--  -->
 
-        <!-- Add more team members as needed -->
+<div class="teamid">
+  <h4>Team Details</h4>
+</div>
+
+<div class="oline">
+<img src="images/gif.gif" alt="Your GIF Description" class="gif">
+
+<div class="team">
+    <div class="team-member">
+      <div class="name">Lalit Lowanshi</div>
+      <div class="details">
+          <p>Email: lalit@example.com</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">lalit's LinkedIn</a></p>
+      </div>
+  </div>
+
+  <div class="team-member">
+      <div class="name">Harshit Dayma</div>
+      <div class="details">
+          <p>Email: harshit@example.com</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">harshit's LinkedIn</a></p>
+      </div>
+  </div>
+
+  <div class="team-member">
+    <div class="name">Gaurav Diwan</div>
+    <div class="details">
+        <p>Email: gauravdiwan10th@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">gaurav's LinkedIn</a></p>
     </div>
-
-    <div class="counter">
+</div>
+</div>
+</div>
+<!--  -->
+      <div class="counter">
     <div class="counter-container">
       <div id="visitor-count" class="animated-text">Visitor count: <span id="count">0</span></div>
     </div>
     </div>
-  </div>
+<!--  -->
     <footer>
       <p>
-          <span class="copyright-symbol">&#169;</span> 2023 Notes Support. All rights reserved.
+          <span class="copyright-symbol">&#169;</span> 2023 Note Nexus. All rights reserved.
+          <p>Designed & Developed by : Team Note Nexus</p>
       </p>
-      <h6>Designed & Hosted by : Gaurav Diwan & Team</h6>
   </footer>
 
+  <script src="js/TeamMember.js"></script>
+<!--===============================================================================================-->
   <script src="js/counter.js"></script>
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.html"></script>
