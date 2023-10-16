@@ -23,8 +23,8 @@
     background-color: #ADD8E6;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
-    width: 1250px;
-    margin: 10px;
+    width: 100%;
+    margin-top: 5px;
     margin-right: 0px;
     padding: 15px;
     border: .5px solid black;
@@ -36,4 +36,8 @@
 }
 .oline{
     display: inline-flex;
+}
+.name:hover{
+    border: 1px solid red;
+    color: #bf00ff;
 }
