@@ -27,9 +27,48 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="css/gif.css">
 <!--===============================================================================================-->
+<!-- <link rel="stylesheet" type="text/css" href="slide.css"> -->
+<!--===============================================================================================-->
 <style>
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
 
+.slide {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent background image repetition */
+}
 
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: rgba(28, 210, 8, 0.477);
+}
+.prev:hover{
+  border: 2px solid orange;
+}
+.next:hover{
+  border: 2px solid orange;
+}
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
 .blue {
     background: #347fd0;
 }
@@ -152,7 +191,7 @@ a{
   margin:20px;
   padding:0px 10px;
   font-weight:900;
-  font-size:1.1em;
+  font: size 0.9em;;
   line-height:1;
   box-sizing:border-box;
   height:40px
@@ -164,7 +203,7 @@ a{
     width: 100%;
     background-color: #120911; /* Change this to your preferred background color */
     color: #fff; /* Change this to your preferred text color */
-    padding: 10px 0;
+    padding: 10px;
     z-index: 100; /* To ensure the navbar appears above other content */
     border-bottom: 0.5px solid #f7f6f6;
 }
@@ -172,18 +211,20 @@ a{
 .navbar{
   margin-left: 0px;
   width: 100%;
-  height: 90px;
+  height: 90px; 
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-.sides{
+.superlogo{
+  width: 190px;
+  height: 65px;
   margin-left: 0px;
-  padding-left: 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  background-image: url('images/superlogo.jpeg');
+  padding: 3px;
+  background-size: cover;
+  background-position: center;
 }
 .sides2{
   margin-right: 0px;
@@ -315,12 +356,12 @@ footer {
 <body>
 	<div class="header">
 		<nav class="navbar">
-      <div class="sides">
-      <a href="" class="logo">HOME</a>
-		  <a href="https://scholarshipportal.mp.nic.in/Index.aspx" target="_blank" class="logo">State Scholarship Portal</a>
-		  <a href="https://drive.google.com/file/d/1c_BiLegpzYBujdF1CaC3HiTsbR1FYGKt/view?usp=drivesdk" target="_blank" class="logo">Academic Calender</a>
-      <div class="sides2"> <a href="#" class="menu"> </a></div>
-    </div>
+        <div class="superlogo"></div>
+      <div><a href="" class="logo">HOME</a></div>
+		  <div><a href="https://scholarshipportal.mp.nic.in/Index.aspx" target="_blank" class="logo">State Scholarship Portal</a></div>
+      <div><a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZMIJgu_kJOuGitePH__03dl3HLUvsCnA4WaMlmR3of3kHjg/formResponse" target="_blank" class="logo">Send Your Notes !</a></div>
+		  <div><a href="https://drive.google.com/file/d/1c_BiLegpzYBujdF1CaC3HiTsbR1FYGKt/view?usp=drivesdk" target="_blank" class="logo">Academic Calender</a></div>
+      <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSfZLe2--g9HBCb4tQfb11vvVjFpUvHezQeHDmSr1K9wQlPC8Q/viewform?usp=sf_link" target="_blank" class="logo">Feedback</a></div>
     </nav>
 		
 		<div class="info">
@@ -339,9 +380,17 @@ footer {
 		<span>Latest News</span><span class="text1" ><marquee>Hello everyone! More notes will be updated soon...stay tuned! </marquee></span>
 		</div>
 	  </section>
+<!--  -->
+<div class="slideshow-container">
+  <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZMIJgu_kJOuGitePH__03dl3HLUvsCnA4WaMlmR3of3kHjg/formResponse" target="_blank"><div class="slide" style="background-image: url('images/n1.jpg');"></div></a>
+  <a href="" target="_blank"><div class="slide" style="background-image: url('images/n2.jpg');"></div></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZLe2--g9HBCb4tQfb11vvVjFpUvHezQeHDmSr1K9wQlPC8Q/viewform?usp=sf_link" target="_blank"><div class="slide" style="background-image: url('images/n3.jpg');"></div></a>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
 
-
-
+<script src="slide.js"></script>
+<!--  -->
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -361,35 +410,35 @@ footer {
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Engineering Physics BT-201</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/physics.html" role="button">Show</a></td>
+									<td class="column5"><a class="btn btn-info" href="subjects/physics.html" target="_blank" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Engineering Maths BT-202</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/M2.html" role="button">Show</a></td>
+									<td class="column5"><a class="btn btn-info" href="subjects/M2.html" target="_blank" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Mechanical Engineering BT-203</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/BME.html" role="button">Show</a></td>
+									<td class="column5"><a class="btn btn-info" href="subjects/BME.html" target="_blank" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Civil Engineering & Mechanics BT-204</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/CE&EM.html" role="button">Show</a></td>
+									<td class="column5"><a class="btn btn-info" href="subjects/CE&EM.html" target="_blank" role="button">Show</a></td>
 								
 								</tr>
 								<tr>
 									<td class="column1">First</td>
 									<td class="column2">Second</td>
 									<td class="column3">Basic Computer Engineering BT-205</td>
-									<td class="column5"><a class="btn btn-info" target="_blank" href="subjects/BCE.html" role="button">Show</a></td>
+									<td class="column5"><a class="btn btn-info" href="subjects/BCE.html" target="_blank" role="button">Show</a></td>
 								
 								</tr>
 								
@@ -420,7 +469,7 @@ footer {
   <div class="team-member">
       <div class="name">Harshit Dayma</div>
       <div class="details">
-          <p>Email: harshit@example.com</p>
+          <p>Email: <a href="https://harshit@gmail.com">harshit@gmail.com</a></p>
           <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">harshit's LinkedIn</a></p>
           <p>Skills : Java</p>
       </div>
@@ -429,7 +478,7 @@ footer {
   <div class="team-member">
     <div class="name">Gaurav Diwan</div>
     <div class="details">
-        <p>Email: gauravdiwan10th@gmail.com</p>
+        <p>Email: <a href="https://gauravdiwan10th@gmail.com">gauravdiwan10th@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">gaurav's LinkedIn</a></p>
         <p>Skills : C</p>
     </div>
@@ -450,7 +499,9 @@ footer {
       </p>
   </footer>
 
-  <script src="js/TeamMember.js"></script>
+
+<!--===============================================================================================-->
+<script src="js/TeamMember.js"></script>
 <!--===============================================================================================-->
   <script src="js/counter.js"></script>
 <!--===============================================================================================-->	
@@ -462,7 +513,6 @@ footer {
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
 </body>
 
 </html>

@@ -5,16 +5,24 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;
+    background-image: url('gallexy.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .section-title {
     width: 60%;
     text-align: center;
-    background-color: #333;
+    background-color: #333333;
     color: #fff;
     padding: 10px;
     border: 2px solid #000;
     border-radius: 10px;
+    margin-top: 20px;
     margin-bottom: 20px; /* Adds space between the title and the table */
 }
 
@@ -29,7 +37,7 @@ body {
 }
 
 .custom-table th, .custom-table td {
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     padding: 8px;
     text-align: center;
 }
@@ -39,7 +47,7 @@ body {
     color: #fff;
 }
 
-.custom-table tbody tr:nth-child(odd) {
+.custom-table tbody tr{
     background-color: #f9f9f9;
 }
 
@@ -50,3 +58,53 @@ body {
 .link{
     color: #1000f7;
 }
+.logo{
+    margin-left: 0px;
+    border:2px solid #fff;
+    color: #ffffff;
+    border-radius:3px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    align-content:center;
+    margin:20px;
+    padding:0px 10px;
+    font-weight:900;
+    font: size 0.9em;;
+    line-height:1;
+    box-sizing:border-box;
+    height:40px
+  }
+  .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #120911; /* Change this to your preferred background color */
+      color: #ffffff; /* Change this to your preferred text color */
+      padding: 10px;
+      z-index: 100; /* To ensure the navbar appears above other content */
+      border-bottom: 0.5px solid #f7f6f6;
+  }
+  
+  .navbar{
+    margin-left: 0px;
+    width: 100%;
+    height: 70px; 
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .superlogo{
+    width: 190px;
+    height: 65px;
+    margin-left: 0px;
+    background-image: url('superlogo.jpeg');
+    padding: 3px;
+    background-size: cover;
+    background-position: center;
+  }
+  .sides2{
+    margin-right: 0px;
+  }
