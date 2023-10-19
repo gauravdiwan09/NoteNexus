@@ -25,7 +25,7 @@ function showSlides(n) {
 
 function autoSlide() {
   plusSlides(1);
-  setTimeout(autoSlide, 3000); // Change slide every 5 seconds
+  setTimeout(autoSlide, 5000); // Change slide every 5 seconds
 }
 
 autoSlide();
